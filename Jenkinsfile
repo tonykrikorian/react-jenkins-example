@@ -1,5 +1,10 @@
 pipeline{
-    agent any
+    agent {
+        
+        dockerfile{
+            label: 'backend-api:v1'
+        }
+    }
     stages{
         stage("build"){
           steps{
