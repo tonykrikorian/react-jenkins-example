@@ -4,6 +4,9 @@ pipeline{
         stage("build"){
           steps{
                echo 'Building the application'
+               nodejs('NodeJS-10.19'){
+                   sh 'echo npm --version'
+               }
           }
         }
         stage("test"){
