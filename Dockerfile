@@ -1,4 +1,4 @@
-FROM node:13.12.0-alpine
+FROM node:12
 
 RUN mkdir /home/app
 
@@ -9,7 +9,6 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json /home/app
 COPY package-lock.json /home/app
 RUN npm install
-
-
 COPY . /home/app
-CMD ["npm","start"]
+EXPOSE 80
+CMD ["node","/home/app/index.js"]
