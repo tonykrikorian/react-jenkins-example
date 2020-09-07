@@ -6,8 +6,6 @@ pipeline{
                echo 'Building the application'
                nodejs('NodeJS-10.19'){
                    sh 'npm --version'
-                   sh 'npm install'
-                   sh 'npm run build'
                }
           }
         }
