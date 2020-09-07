@@ -2,7 +2,7 @@ pipeline{
     agent {
         
         dockerfile{
-            label: 'backend-api:v1'
+            label 'backend-api:v1'
         }
     }
     stages{
