@@ -2,7 +2,7 @@ pipeline{
     agent {
         
         dockerfile{
-            label 'backend-api:v1'
+           args '-d -p3010:80'
         }
     }
     stages{
