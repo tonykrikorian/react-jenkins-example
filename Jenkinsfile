@@ -3,7 +3,7 @@ pipeline{
         
         dockerfile{
            additionalBuildArgs "-t frontend-${BUILD_NUMBER}"
-           args "-d -p4000:80 --name frontend-${BUILD_NUMBER} frontend-${BUILD_NUMBER}" 
+           args "-d -p4000:80 frontend-${BUILD_NUMBER}" 
         }
     }
     stages{
