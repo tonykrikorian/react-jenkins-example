@@ -2,7 +2,7 @@ pipeline{
     agent {
         
         dockerfile{
-           args '-d -p3010:80'
+           additionalBuildArgs "-t frontend-${BUILD_NUMBER}"
         }
     }
     stages{
